@@ -6,25 +6,30 @@ let age = prompt("insersici la tua età");
 
 //calcoli 
 
-let kmprice = kmnumbers * 0.21
-let priceunder18 = kmprice - kmprice * 20 / 100
-let priceover65 = kmprice - kmprice * 40 / 100
+
 
 
 
 
 //variabili booleane 
+let finalPrice = kmnumbers * 0.21;
 
-if (console.log < 18) {
-    document.getElementById("final_price").innerHTML = console.log("il tuo biglietto costa" + " " + priceunder18)
+if (age < 18) {
+    finalPrice = finalPrice - finalPrice * 20 / 100
 }
-if (age > 65) {
-    document.getElementById("final_price").innerHTML = console.log("il tuo biglietto costa" + " " + priceover65)
-} else {
-    document.getElementById("final_price").innerHTML = console.log("il tuo biglietto costa" + " " + kmprice)
+else if (age > 65) {
+    finalPrice = finalPrice - finalPrice * 40 / 100
 }
+
+
+
+
+console.log("il tuo biglietto costa" + " " + finalPrice);
+document.getElementById("final_price").innerHTML = finalPrice.toFixed(2);
 
 //stampa in html
+
+
 
 
 
